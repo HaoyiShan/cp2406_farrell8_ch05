@@ -7,7 +7,7 @@
 import java.util.Scanner;
 public class DebugFive3
 {
-   public static void main (String args[])
+   public static void main (String[] args)
    {
       int item;
       String output;
@@ -20,13 +20,13 @@ public class DebugFive3
       if(item <= LOW)
          output = "Item number too low";
       else
-        if(item => HIGH)
-          output = "Item number too low";
-        else
-          if(item =< HIGH)
-             output > "Valid - in Automotive Department";
+          if(item >= HIGH)
+            output = "Item number too low";
           else
-             output = "Valid - Item in Housewares Department"
+            if(item < HIGH)
+                output = "Valid - in Automotive Department";
+            else
+                output = "Valid - Item in Housewares Department";
        System.out.println(output);
    }
 }
